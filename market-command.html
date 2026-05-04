@@ -7,21 +7,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #080807;
-    --surface: #111110;
-    --surface2: #1c1917;
-    --border: #2a2623;
-    --border2: #3a3530;
-    --text: #f0ede8;
-    --text2: #a8a09a;
-    --text3: #6b6460;
+ :root {
+    --bg: #ffffff;
+    --surface: #f5f5f4;
+    --surface2: #e8e5e1;
+    --border: #d6d3d1;
+    --border2: #c4c0bc;
+    --text: #1c1917;
+    --text2: #57534e;
+    --text3: #a8a29e;
     --gold: #d4a843;
-    --gold2: #f0c060;
-    --green: #22c55e;
-    --red: #ef4444;
-    --blue: #60a5fa;
-    --amber: #f59e0b;
+    --gold2: #b45309;
+    --green: #16a34a;
+    --red: #dc2626;
+    --blue: #2563eb;
+    --amber: #d97706;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -765,7 +765,7 @@ Give 3-5 suggestions. Be specific, actionable, and grounded in today's Indian ma
       headers: { "Content-Type": "application/json", "x-api-key": apiKey, "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true" },
       body: JSON.stringify({
         model: "claude-sonnet-4-5",
-        max_tokens: 1500,
+        max_tokens: 3000,
         tools: [{ type: "web_search_20250305", name: "web_search" }],
         messages: [{ role: "user", content: prompt }]
       })
